@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ERDiagram version="1.1">
+  <Connection session="asdfg" database="ewheelz" />
+  <Drawing gridVisible="false" snapOn="false" fastRouting="false" labelsVisible="true" />
+  <Tables>
+    <Table name="busmaster">
+      <Drawing expanded="true" location="478,354" dimensions="164,129" />
+      <Columns>
+        <Column name="BusId" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="BusType" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="50" />
+        </Column>
+        <Column name="BusNumber" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="Capacity" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="3" />
+        </Column>
+        <Column name="TravelsId" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="customermaster">
+      <Drawing expanded="true" location="0,354" dimensions="204,169" />
+      <Columns>
+        <Column name="CustomerId" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="CustomerName" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="80" />
+        </Column>
+        <Column name="PhoneNumber" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="Address" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="tinytext" size="255" />
+        </Column>
+        <Column name="Location" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="80" />
+        </Column>
+        <Column name="email" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="80" />
+        </Column>
+        <Column name="Gender" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="10" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="feedback">
+      <Drawing expanded="true" location="0,568" dimensions="187,109" />
+      <Columns>
+        <Column name="FId" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="int" size="10" />
+        </Column>
+        <Column name="UserID" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="100" />
+        </Column>
+        <Column name="Feedback" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="text" size="65535" />
+        </Column>
+        <Column name="DateSubmitted" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="date" size="10" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="login">
+      <Drawing expanded="true" location="232,568" dimensions="164,89" />
+      <Columns>
+        <Column name="userid" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="password" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="auth" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="5" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="paymentdetails">
+      <Drawing expanded="true" location="443,0" dimensions="183,190" />
+      <Columns>
+        <Column name="PaymentId" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="CustomerId" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="PaymentMode" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="25" />
+        </Column>
+        <Column name="BankName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="30" />
+        </Column>
+        <Column name="CardNo" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="25" />
+        </Column>
+        <Column name="NetAmount" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="10" />
+        </Column>
+        <Column name="PaymentStatus" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="TicketId" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="routemap">
+      <Drawing expanded="true" location="441,568" dimensions="176,88" />
+      <Columns>
+        <Column name="RouteId" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="PickupPoint" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="varchar" size="50" />
+        </Column>
+        <Column name="Fare" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="3" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="routemaster">
+      <Drawing expanded="true" location="234,0" dimensions="164,229" />
+      <Columns>
+        <Column name="RouteId" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="rFrom" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="50" />
+        </Column>
+        <Column name="rTo" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="50" />
+        </Column>
+        <Column name="TravelsId" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="BusId" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="Departure" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="time" size="8" />
+        </Column>
+        <Column name="Arrival" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="time" size="8" />
+        </Column>
+        <Column name="Fare" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="int" size="10" />
+        </Column>
+        <Column name="JDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="date" size="10" />
+        </Column>
+        <Column name="Availability" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="3" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="ticketdetails">
+      <Drawing expanded="true" location="0,0" dimensions="189,309" />
+      <Columns>
+        <Column name="TicketId" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="RouteId" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="CustomerId" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="rFrom" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="50" />
+        </Column>
+        <Column name="rTo" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="50" />
+        </Column>
+        <Column name="JourneyDate" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="date" size="10" />
+        </Column>
+        <Column name="StartTime" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="time" size="8" />
+        </Column>
+        <Column name="ReachTime" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="time" size="8" />
+        </Column>
+        <Column name="Seats" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="BoardingPoint" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="50" />
+        </Column>
+        <Column name="NetAmount" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="10" />
+        </Column>
+        <Column name="Status" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="PaymentId" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="BusId" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="travelsmaster">
+      <Drawing expanded="true" location="249,354" dimensions="184,149" />
+      <Columns>
+        <Column name="TravelsId" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="Travels" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="80" />
+        </Column>
+        <Column name="Location" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="80" />
+        </Column>
+        <Column name="Address" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="tinytext" size="255" />
+        </Column>
+        <Column name="AgentName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="80" />
+        </Column>
+        <Column name="PhoneNumber" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+  </Tables>
+  <Relationships />
+</ERDiagram>
+

@@ -1,0 +1,112 @@
+CREATE TABLE busmaster (
+  BusId varchar(20) NOT NULL,
+  BusType varchar(50) DEFAULT NULL,
+  BusNumber varchar(20) DEFAULT NULL,
+  Capacity char(30) DEFAULT '0',
+  TravelsId varchar(20) DEFAULT NULL,
+bid char(100)
+  PRIMARY KEY (BusId)
+);
+
+
+
+CREATE TABLE customermaster (
+  CustomerId varchar(20) NOT NULL,
+  CustomerName varchar(80) NOT NULL,
+  PhoneNumber varchar(20) DEFAULT NULL,
+  Address  varchar(20) NOT NULL,
+  Location varchar(80) NOT NULL,
+  email varchar(80) DEFAULT NULL,
+  Gender varchar(10) DEFAULT NULL
+)
+CREATE TABLE feedback (
+  UserID varchar(100) DEFAULT NULL,
+  Feedback varchar(100),
+  DateSubmitted date DEFAULT NULL
+);
+
+
+CREATE TABLE login (
+  userid varchar(20) NOT NULL,
+  password varchar(20) NOT NULL,
+  auth char(5) DEFAULT NULL,
+  PRIMARY KEY (userid)
+);
+
+
+
+CREATE TABLE paymentdetails (
+  PaymentId varchar(20) DEFAULT NULL,
+  CustomerId varchar(20) DEFAULT NULL,
+  PaymentMode varchar(25) DEFAULT NULL,
+  BankName varchar(30) DEFAULT NULL,
+  CardNo varchar(25) DEFAULT NULL,
+  NetAmount char(10) DEFAULT NULL,
+  PaymentStatus varchar(20) DEFAULT NULL,
+  TicketId varchar(20) DEFAULT NULL
+);
+
+CREATE TABLE routemap (
+  RouteId varchar(20) NOT NULL,
+  PickupPoint varchar(50) NOT NULL,
+  Fare char(3) DEFAULT '0',
+  PRIMARY KEY (RouteId,PickupPoint)
+)
+
+CREATE TABLE routemaster (
+  RouteId varchar(20) NOT NULL,
+  rFrom varchar(50) NOT NULL,
+  rTo varchar(50) NOT NULL,
+  TravelsId varchar(20) NOT NULL,
+  BusId varchar(20) NOT NULL,
+  Departure time DEFAULT NULL,
+  Arrival time DEFAULT NULL,
+  Fare char(10) NOT NULL DEFAULT '0',
+  JDate date DEFAULT NULL,
+  Availability char(3) DEFAULT NULL,
+  via varchar(200) DEFAULT NULL,
+rid char(100)
+  PRIMARY KEY (RouteId)
+);
+
+CREATE TABLE signup (
+  name varchar(200) DEFAULT NULL,
+  unm varchar(200) DEFAULT NULL,
+  pwd varchar(200) DEFAULT NULL,
+  email varchar(200) DEFAULT NULL,
+  cno varchar(200) DEFAULT NULL
+)
+
+CREATE TABLE ticketdetails (
+  TicketId varchar(20) NOT NULL,
+  RouteId varchar(20) NOT NULL,
+  CustomerId varchar(20) NOT NULL,
+  rFrom varchar(50) DEFAULT NULL,
+  rTo varchar(50) DEFAULT NULL,
+  JourneyDate date NOT NULL,
+  StartTime time DEFAULT NULL,
+  ReachTime time DEFAULT NULL,
+  Seats varchar(255) DEFAULT NULL,
+  BoardingPoint varchar(50) DEFAULT NULL,
+  NetAmount char(10) DEFAULT NULL,
+  Status varchar(20) DEFAULT NULL,
+  PaymentId varchar(20) DEFAULT NULL,
+  BusId varchar(20) DEFAULT NULL,
+tid char(100),
+  PRIMARY KEY (TicketId)
+);
+
+
+CREATE TABLE travelsmaster (
+  TravelsId varchar(20) NOT NULL,
+  Travels varchar(80) DEFAULT NULL,
+  Location varchar(80) DEFAULT NULL,
+  Address varchar(80),
+  AgentName varchar(80) DEFAULT NULL,
+  PhoneNumber varchar(20) DEFAULT NULL,
+tid char(100)
+  PRIMARY KEY (TravelsId)
+);
+
+insert into login values('admin','admin',0)
+

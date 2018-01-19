@@ -1,0 +1,9 @@
+CREATE TABLE travelsmaster (
+  TravelsId varchar2(20) NOT NULL,
+  Travels varchar2(80) default NULL,
+  Location varchar2(80) default NULL,
+  Address varchar2(100),
+  AgentName varchar2(80) default NULL,
+  PhoneNumber varchar2(20) default NULL,
+  PRIMARY KEY  (TravelsId))
+/

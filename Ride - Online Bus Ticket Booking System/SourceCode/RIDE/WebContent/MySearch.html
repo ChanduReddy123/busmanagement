@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  	<LINK href="styles.css" type="text/css" rel="stylesheet">
+
+ </HEAD>
+
+ <BODY class=SC>
+  <TABLE class="notepad" align=center width="20%">
+	  <h2 class=report align=center><FONT size ="4" COLOR="#333399">Search Jobs
+		<TR>
+	<TD class=row_even align=center ><B>KeyWord</B></TD>
+	<TD class=row_even align=center><B>Criteria</B></TD>
+	<TD class=row_even align=center><B>Location</B></TD>
+	<TD class=row_even align=center><B>Experience</B></TD>
+	<TD class=row_even align=center><B>FunctionalArea</B></TD>
+</TR>
+<TR>
+	<TD class=row_even><input TYPE="text" name="KeyWord" size="15" > 
+
+<TD class=row_even>
+		<select name ="criteria">
+		<option value="">--</option>
+		<option value="Allwords">All words</option>
+		<option value="Anyword">Anyword</option>
+		<option value="ExactPhrase">Exact Phrase</option>
+		</select>
+		
+<TD  class=row_even><input TYPE="Text" name="Location" size="10" >
+
+	<TD  class=row_even>
+		<select name="Experience" value="0">
+		<option value="0">--</option>
+		<option value="0">Fresher</option>
+		<script>
+			for(var i=1;i<=25;i++){
+				document.writeln("<option value="+i+">"+i+"</option>");
+			}
+		</script>
+		</select>
+	<TD  class=row_even><select name="FunctionalArea" >
+		<option value="">Select</option>
+		<option value="Accounts">Accounts,Finance,Tax,Cs,Audit</option>
+		<option value="Banking">Banking,Insurance</option>
+		<option value="HR">HR/Administration</option>
+		<option value="BPO">ITES/BPO/IPO</option>
+		<option value="Marketing">Marketing,Advertising,MR,PR</option>
+		<option value="Production">Production,Maintainance,Quality</option>
+		<option value="Telecom">Telecom</option>
+		<option value="IT">Information Technology</option>
+		<option value="Application">Application,Programming,Maintainance</option>
+		<option value="DBA">DBA,Datawarehousing</option>
+		<option value="Mainframe">Mainframe</option>
+		<option value="Networking">Network administaration,Security</option>
+		<option value="Testing">QA&Testing</option>
+		<option value="SystemProgramming">SystemProgramming</option>
+		<option value="Medical">Medical/Healthcare/hospital</option>
+		<option value="InteriorDesign">Architecture,InteriorDesign</option>
+		<option value="Media">Media/Entertainment</option>
+
+		</select>
+
+<TD background color="#FFCBB3" ><a href="Search1.jsp">
+<img border="0" name="Search" src="Images/Search0.jpg" width="101" height="22" onmouseover="document['Search'].src='Images/Search01.jpg'" onmouseout="document['Search'].src='Images/Search0.jpg'" ></a></td>
+</TR>
+</TABLE>
+ </BODY>
+</HTML>

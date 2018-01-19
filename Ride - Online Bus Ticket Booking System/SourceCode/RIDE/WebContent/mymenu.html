@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<script language="JavaScript">
+  <!--
+
+keyFrame = 0;
+
+keyFrameBack = 0;
+
+movingObjLeft = new Array(1);
+movingObjTop = new Array(1);
+movingObjLeftBack = new Array(1);
+movingObjTopBack = new Array(1);
+
+movingObjLeft[0] = new Array(-175,-160,-140,-120,-100,-80,-60,-40,-20,0);
+movingObjTop[0] = new Array(100,100,100,100,100,100,100,100,100,100);
+movingObjLeftBack[0] = new Array(0,-20,-40,-60,-80,-100,-120,-140,-160,-175);
+movingObjTopBack[0] = new  Array(100,100,100,100,100,100,100,100,100,100);
+
+
+function movein(which,html){
+which.style.background='#CFE6F3'
+description.innerHTML=html
+}
+
+function moveout(which){
+which.style.background='#75A8C1'
+description.innerHTML='&nbsp;'
+}
+//-->
+</script>
+
+ <HEAD>
+ 	<LINK href="styles.css" type="text/css" rel="stylesheet">
+
+ </HEAD>
+
+ <BODY class=Sub>
+  <table bgcolor="black" border="1" cellpadding="2" cellspacing="0" width="150"><tr> 
+<br><br>
+<td class="menu" bordercolor="black" id="choice1" style="cursor:hand;background-color:#75A8C1" onMouseOver="movein(choice1,'To create new user')" onMouseOut="moveout(choice1)" onClick="location.href='AddUser0.jsp'">
+<div align="center">Add New User</div>
+</td>
+  </tr>
+<td class="menu" bordercolor="black" id="choice2" style="cursor:hand;background-color:#75A8C1" onMouseOver="movein(choice2,'Shows about the users details')" onMouseOut="moveout(choice2)" onClick="location.href='ViewUsers.jsp'">
+<div align="center">View Users</div>
+</td>
+  </tr>
+<td class="menu" bordercolor="black" id="choice3" style="cursor:hand;background-color:#75A8C1" onMouseOver="movein(choice3,'Deletes the user information')" onMouseOut="moveout(choice3)" onClick="location.href='DelUser0.jsp'">
+<div align="center">Delete User</div>
+</td>
+  </tr>
+<td class="menu" bordercolor="black" id="choice4" style="cursor:hand;background-color:#75A8C1" onMouseOver="movein(choice4,'Used to change user password')" onMouseOut="moveout(choice4)" onClick="location.href='ChangePassword.jsp'">
+<div align="center">Change Password</div>
+</td>
+  </tr>
+
+    <td bordercolor="black" bgcolor="white" height="18"><font id="description" face="arial" size="2"></font></td>
+  </tr>
+</table>
+
+ </BODY>
+</HTML>

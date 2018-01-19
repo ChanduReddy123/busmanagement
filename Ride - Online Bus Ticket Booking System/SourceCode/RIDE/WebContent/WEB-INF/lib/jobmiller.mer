@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ERDiagram version="1.1">
+  <Connection session="asdfg" database="jobmiller" />
+  <Drawing gridVisible="false" snapOn="false" fastRouting="false" labelsVisible="true" />
+  <Tables>
+    <Table name="applicationdetails">
+      <Drawing expanded="true" location="216,708" dimensions="186,129" />
+      <Columns>
+        <Column name="ApplicationID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="userid" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="JobID" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="ApplicationDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="date" size="10" />
+        </Column>
+        <Column name="Status" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="20" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="contactinformation">
+      <Drawing expanded="true" location="497,434" dimensions="193,189" />
+      <Columns>
+        <Column name="ContactID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="userid" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="FirstName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="100" />
+        </Column>
+        <Column name="LastName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="100" />
+        </Column>
+        <Column name="Email" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="ContactNumber" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="100" />
+        </Column>
+        <Column name="CurrentLocation" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="100" />
+        </Column>
+        <Column name="Address" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="educationaldetails">
+      <Drawing expanded="true" location="497,0" dimensions="199,229" />
+      <Columns>
+        <Column name="EducationalID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="userid" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="BasicQualification" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="PercentageBQ" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="YearOfPassBQ" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="UniversityBQ" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="PostGraduation" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="Percentage" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="YearOfPass" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="University" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="employregistration">
+      <Drawing expanded="true" location="243,434" dimensions="209,209" />
+      <Columns>
+        <Column name="userid" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="password" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="EmployeeName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="EmpNo" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="CompanyName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="ContactNo" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="EmailID" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="DateOfRegistration" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="date" size="10" />
+        </Column>
+        <Column name="Cost" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="interviewdetails">
+      <Drawing expanded="true" location="0,0" dimensions="192,389" />
+      <Columns>
+        <Column name="InterviewID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="JobTitle" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="JobDescription" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="tinytext" size="255" />
+        </Column>
+        <Column name="Eligbility" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="Location" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="ApplyBefore" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="date" size="10" />
+        </Column>
+        <Column name="CompanyName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="CompanyProfile" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="text" size="65535" />
+        </Column>
+        <Column name="EmailToApply" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="WebSite" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="ExecutiveName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="Address" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="tinytext" size="255" />
+        </Column>
+        <Column name="Telephone" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="100" />
+        </Column>
+        <Column name="Fax" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="DateOfPosting" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="date" size="10" />
+        </Column>
+        <Column name="FunctionalArea" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="100" />
+        </Column>
+        <Column name="MinExperience" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="10" />
+        </Column>
+        <Column name="MaxExperience" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="10" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="login">
+      <Drawing expanded="true" location="670,708" dimensions="164,89" />
+      <Columns>
+        <Column name="userid" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="password" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="auth" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="int" size="5" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="personalinformation">
+      <Drawing expanded="true" location="447,708" dimensions="178,109" />
+      <Columns>
+        <Column name="PersonalID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="userid" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="DateOfBirth" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="date" size="10" />
+        </Column>
+        <Column name="Gender" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="100" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="professionalinformation">
+      <Drawing expanded="true" location="0,434" dimensions="198,229" />
+      <Columns>
+        <Column name="ProfessionalID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="userid" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="TotalExperience" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="double" size="22" />
+        </Column>
+        <Column name="AnnualSalary" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="float" size="12" />
+        </Column>
+        <Column name="FunctionalArea" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="CompanyName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="KeySkills" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="ResumeTitle" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="ResumePath" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="100" />
+        </Column>
+        <Column name="TextResume" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="text" size="65535" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="uploads">
+      <Drawing expanded="true" location="0,708" dimensions="171,189" />
+      <Columns>
+        <Column name="UploadID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="userid" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="Title" primary_key="false" foreign_key="false" required="true" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="Date" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="date" size="10" />
+        </Column>
+        <Column name="Category" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="Description" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="Contributer" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="255" />
+        </Column>
+        <Column name="FilePath" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="100" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="walkindetails">
+      <Drawing expanded="true" location="237,0" dimensions="215,289" />
+      <Columns>
+        <Column name="WalkinID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="varchar" size="20" />
+        </Column>
+        <Column name="JobTitle" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="JobDescription" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="tinytext" size="255" />
+        </Column>
+        <Column name="Eligibility" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="Location" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="WalkinDate" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="date" size="10" />
+        </Column>
+        <Column name="WalkinTime" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="CompanyName" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="200" />
+        </Column>
+        <Column name="CompanyDescription" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="text" size="65535" />
+        </Column>
+        <Column name="Address" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="254" />
+        </Column>
+        <Column name="Website" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="254" />
+        </Column>
+        <Column name="EmailToRegister" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="254" />
+        </Column>
+        <Column name="FunctionalArea" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="varchar" size="100" />
+        </Column>
+      </Columns>
+    </Table>
+  </Tables>
+  <Relationships />
+</ERDiagram>
+

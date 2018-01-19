@@ -1,0 +1,4 @@
+Use IE(internet Explorer)
+
+user id: admin
+password Admin
